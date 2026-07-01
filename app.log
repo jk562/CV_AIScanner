@@ -1,0 +1,36 @@
+2026-07-01 10:30:36 - INFO - Application started. Database initialised.
+2026-07-01 10:30:47 - INFO - Application started. Database initialised.
+2026-07-01 10:31:15 - INFO - Application started. Database initialised.
+2026-07-01 10:31:48 - INFO - Application started. Database initialised.
+2026-07-01 10:31:48 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 10:31:48 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-01 10:31:48 - INFO -  * Restarting with stat
+2026-07-01 10:31:49 - INFO - Application started. Database initialised.
+2026-07-01 10:31:49 - WARNING -  * Debugger is active!
+2026-07-01 10:31:49 - INFO -  * Debugger PIN: 115-099-518
+2026-07-01 10:31:55 - INFO - 127.0.0.1 - - [01/Jul/2026 10:31:55] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-01 10:31:55 - INFO - 127.0.0.1 - - [01/Jul/2026 10:31:55] "GET /login HTTP/1.1" 200 -
+2026-07-01 10:31:55 - INFO - 127.0.0.1 - - [01/Jul/2026 10:31:55] "GET /StaticBG/BG2.jpg HTTP/1.1" 200 -
+2026-07-01 10:32:05 - INFO - User 'kailash@gmail.com' logged in successfully.
+2026-07-01 10:32:05 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 10:32:05 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:05] "GET /dashboard HTTP/1.1" 200 -
+2026-07-01 10:32:05 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:05] "GET /StaticBG/BG3.jpg HTTP/1.1" 200 -
+2026-07-01 10:32:13 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:13] "GET /results/1 HTTP/1.1" 200 -
+2026-07-01 10:32:13 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:13] "[36mGET /StaticBG/BG2.jpg HTTP/1.1[0m" 304 -
+2026-07-01 10:32:19 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:19] "GET /dashboard HTTP/1.1" 200 -
+2026-07-01 10:32:19 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:19] "[36mGET /StaticBG/BG3.jpg HTTP/1.1[0m" 304 -
+2026-07-01 10:32:23 - INFO - User 'kailash@gmail.com' logged out.
+2026-07-01 10:32:23 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:23] "[32mGET /logout HTTP/1.1[0m" 302 -
+2026-07-01 10:32:23 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:23] "GET /login HTTP/1.1" 200 -
+2026-07-01 10:32:23 - INFO - 127.0.0.1 - - [01/Jul/2026 10:32:23] "[36mGET /StaticBG/BG2.jpg HTTP/1.1[0m" 304 -
+2026-07-01 10:34:08 - INFO - Application started. Database initialised.
+2026-07-01 10:34:08 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 10:34:08 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-01 10:34:08 - INFO -  * Restarting with stat
+2026-07-01 10:34:09 - INFO - Application started. Database initialised.
+2026-07-01 10:34:09 - WARNING -  * Debugger is active!
+2026-07-01 10:34:09 - INFO -  * Debugger PIN: 115-099-518
+2026-07-01 10:34:17 - INFO - 127.0.0.1 - - [01/Jul/2026 10:34:17] "GET /login HTTP/1.1" 200 -
+2026-07-01 10:34:17 - INFO - 127.0.0.1 - - [01/Jul/2026 10:34:17] "[36mGET /StaticBG/BG2.jpg HTTP/1.1[0m" 304 -
