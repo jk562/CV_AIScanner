@@ -1,6 +1,6 @@
 # AI Resume Screener
 
-An AI-powered web application that helps recruiters rank candidates by matching resumes against a job description. Upload multiple resumes (PDF or DOCX), enter a job description, and instantly receive a ranked list of candidates scored by relevance — powered by TF-IDF and Cosine Similarity.
+An AI-powered web application that helps recruiters rank candidates by matching resumes against a job description. Upload multiple resumes (PDF or DOCX), enter a job description, and instantly receive a ranked list of candidates scored by relevance powered by TF-IDF and Cosine Similarity.
 
 ---
 
