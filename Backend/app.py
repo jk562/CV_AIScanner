@@ -50,7 +50,7 @@ def login():
 
         conn = database.get_connection()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM users WHERE username = ?", (username,))
+        cur.execute("SELECT * FROM users WHERE username = %s", (username,))
         user = cur.fetchone()
         conn.close()
 
@@ -77,7 +77,7 @@ def signup():
 
         conn = database.get_connection()
         cur = conn.cursor()
-        cur.execute("SELECT * FROM users WHERE username = ?", (username,))
+        cur.execute("SELECT * FROM users WHERE username = %s", (username,))
         existing = cur.fetchone()
         conn.close()
 
@@ -87,7 +87,7 @@ def signup():
         else:
             conn = database.get_connection()
             cur = conn.cursor()
-            cur.execute("INSERT INTO users (username, password) VALUES (?, ?)",
+            cur.execute("INSERT INTO users (username, password) VALUES (%s, %s)",
                         (username, generate_password_hash(password)))
             conn.commit()
             user_id = cur.lastrowid

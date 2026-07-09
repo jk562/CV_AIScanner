@@ -42,7 +42,56 @@
     </div>
 </div>
 <script>
-document.getElementById('upload-form').addEventListener('submit', function() {
+const resumeInput = document.getElementById('resume-input');
+const fileListEl = document.getElementById('file-list');
+let selectedFiles = [];
+
+function renderFileList() {
+    fileListEl.innerHTML = '';
+    selectedFiles.forEach((file, index) => {
+        const item = document.createElement('li');
+        item.className = 'list-group-item d-flex justify-content-between align-items-center';
+        const name = document.createElement('span');
+        name.textContent = file.name;
+        name.className = 'text-truncate me-2';
+        const removeBtn = document.createElement('button');
+        removeBtn.type = 'button';
+        removeBtn.className = 'btn btn-sm btn-outline-danger';
+        removeBtn.textContent = 'Remove';
+        removeBtn.addEventListener('click', function() {
+            selectedFiles.splice(index, 1);
+            syncInputFiles();
+            renderFileList();
+        });
+        item.appendChild(name);
+        item.appendChild(removeBtn);
+        fileListEl.appendChild(item);
+    });
+}
+
+function syncInputFiles() {
+    const dataTransfer = new DataTransfer();
+    selectedFiles.forEach(file => dataTransfer.items.add(file));
+    resumeInput.files = dataTransfer.files;
+}
+
+resumeInput.addEventListener('change', function() {
+    for (const file of resumeInput.files) {
+        const isDuplicate = selectedFiles.some(f => f.name === file.name && f.size === file.size);
+        if (!isDuplicate) {
+            selectedFiles.push(file);
+        }
+    }
+    syncInputFiles();
+    renderFileList();
+});
+
+document.getElementById('upload-form').addEventListener('submit', function(e) {
+    if (selectedFiles.length === 0) {
+        e.preventDefault();
+        alert('Please select at least one resume.');
+        return;
+    }
     document.getElementById('loading').style.display = 'block';
     document.getElementById('submit-btn').disabled = true;
     document.getElementById('submit-btn').textContent = 'Processing...';
