@@ -32,7 +32,8 @@
         <textarea class="form-control mb-3" name="job_description" rows="6" required></textarea>
 
         <label style="color: white;" class="form-label">Upload Resumes (PDF/DOCX, multiple allowed)</label>
-        <input class="form-control mb-3" type="file" name="resumes" multiple accept=".pdf,.docx" required>
+        <input class="form-control mb-2" type="file" id="resume-input" name="resumes" multiple accept=".pdf,.docx">
+        <ul id="file-list" class="list-group mb-3"></ul>
 
         <button class="btn btn-primary w-100" type="submit" id="submit-btn">Analyze & Rank</button>
     </form>
@@ -99,4 +100,3 @@ document.getElementById('upload-form').addEventListener('submit', function(e) {
 </script>
 </body>
 </html>
-
